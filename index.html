@@ -179,8 +179,8 @@ function render(){
   +'<div class="step"><i>4</i><p><b>The start.</b> I grouped those '+GAP.length+' towns into '+CL.length+' clusters by location, picked a candidate venue in each, and propose a first event in Waltham.</p></div>'
   +'<div class="note"><b>This is only Northeastern.</b> Students from other schools work in these towns too, so the real audience in each of these places is larger.</div>'
   +'<h2 id="map">Where they work, and where 222 has events</h2><p class="muted">Tap a town or an event for details.</p>'
-  +'<div class="mapbox">'+mapSvg()+'<div class="legend">'+lg+'<span><span class="sw cov"></span>Town with a 222 event</span><span><span class="sw ev"></span>222 event location</span></div></div>'
-  +'<p class="small muted">The map is schematic and not to scale. Rings show miles from downtown Boston, dot size shows placements, and counts are where students work, not where they live.</p>'
+  +'<div class="mapbox">'+mapSvg()+'<div class="legend" style="margin-bottom:0">'+lg+'</div><div class="legend" style="margin-top:4px"><span><b>Has a 222 event:</b></span><span><span class="sw cov"></span>Town</span><span><span class="sw ev"></span>Event location</span></div></div>'
+  +'<p class="small muted">The map is schematic and not to scale. Rings show miles from downtown Boston, dot size shows placements, and counts are where students work, not where they live. 222 events are those listed in the 222 app in November 2026.</p>'
   +'<div id="panel">'+panel()+'</div>'
   +'<p class="small muted" style="margin:16px 0 8px"><b>All 20 towns</b> · tap a town for details</p>'+chips()+'<input type="text" id="q" placeholder="Search towns" value="'+esc(S.q)+'"><div class="lh"><span>Town</span><span>Co-op placements</span></div><div class="list" id="list">'+listHtml()+'</div>'
   +'<h2 id="gap">The gap, in '+CL.length+' clusters</h2><p class="muted">I sorted the '+GAP.length+' towns into '+CL.length+' clusters, which are groups of nearby towns. In each cluster, I would start in its hub, the town with the most co-op placements. Tap a town for details.</p>'+clusters()
