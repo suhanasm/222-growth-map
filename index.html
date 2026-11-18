@@ -164,10 +164,10 @@ function render(){
   var pc=Math.round(CS/TOTAL*100),pg=100-pc,cg='linear-gradient(90deg,'+CL.map(function(c,i){return c.c+' '+(i*25)+'% '+((i+1)*25)+'%';}).join(',')+')';
   var reach=GAP.filter(function(t){return mi(w,t)<=10;}),rs=sum(reach),bu=tw("Burlington"),rbl=GAP.filter(function(t){return mi(bu,t)<=10;}),rb=sum(rbl);
   var lg='<span><b>No 222 event:</b></span>'+CL.map(function(c){return '<span><span class="sw" style="background:'+c.c+'"></span>'+esc(c.n)+'</span>';}).join("");
-  app.innerHTML='<div id="top"></div><p class="eyebrow">Northeastern co-op × 222</p>'
-  +'<h1>Where 222 could go next: <span class="pop">'+num(GS)+'</span> co-op placements across <span class="pop">'+GAP.length+' towns</span> with no 222 events.</h1>'
+  app.innerHTML='<div id="top"></div><p class="eyebrow">Northeastern Co-op × 222</p>'
+  +'<h1>Where 222 could go next: <span class="pop">'+num(GS)+'</span> Co-op placements across <span class="pop">'+GAP.length+' towns</span> with no 222 events.</h1>'
   +'<p class="lede">Northeastern students on co-op can end up in a town where they know no one. This page shows where they are, where 222 has events, and where to host first.</p>'
-  +'<div class="def"><b>What is a co-op?</b> A six-month, full-time, paid job that Northeastern students do during their degree, typically twice. More than 11,000 Northeastern students do one every year.</div>'
+  +'<div class="def"><b>What is a Co-op?</b> A six-month, full-time, paid job that Northeastern students do during their degree, typically twice. More than 11,000 Northeastern students do one every year.</div>'
   +video()
   +'<div class="split"><p class="splitt"><b>'+num(TOTAL)+'</b> co-op placements in the 20 towns with the most</p><div class="splitbar"><i style="width:'+pc+'%;background:var(--live);opacity:.8"></i>'+CL.map(function(c){return '<i style="width:'+(c.sum/TOTAL*100).toFixed(2)+'%;background:'+c.c+'"></i>';}).join("")+'</div>'
   +'<div class="splitrow"><span class="k" style="background:var(--live)"></span><p><b>'+num(CS)+'</b> <span class="muted">('+pc+'%)</span> are in '+esc(evList)+', where 222 has events.</p></div>'
