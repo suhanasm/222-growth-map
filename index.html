@@ -170,7 +170,7 @@ function render(){
   +'<p class="lede">Northeastern students on Co-op can end up in a town where they know no one. This page shows where they are, where 222 has events, and where to host first.</p>'
   +'<div class="def"><b>What is a Co-op?</b> A six-month, full-time, paid job that Northeastern students do during their degree, typically twice. More than 11,000 Northeastern students do one every year.</div>'
   +video()
-  +'<div class="split"><p class="splitt"><b>'+num(TOTAL)+'</b> Co-op placements in the 20 towns with the most</p><div class="splitbar"><i style="width:'+pc+'%;background:var(--live);opacity:.8"></i>'+CL.map(function(c){return '<i style="width:'+(c.sum/TOTAL*100).toFixed(2)+'%;background:'+c.c+'"></i>';}).join("")+'</div>'
+  +'<div class="split"><p class="splitt"><b>'+num(TOTAL)+'</b> Co-op placements across the 20 largest towns</p><div class="splitbar"><i style="width:'+pc+'%;background:var(--live);opacity:.8"></i>'+CL.map(function(c){return '<i style="width:'+(c.sum/TOTAL*100).toFixed(2)+'%;background:'+c.c+'"></i>';}).join("")+'</div>'
   +'<div class="splitrow"><span class="k" style="background:var(--live)"></span><p><b>'+num(CS)+'</b> <span class="muted">('+pc+'%)</span> are in '+esc(evList)+', where 222 has events.</p></div>'
   +'<div class="splitrow"><span class="k" style="background:'+cg+'"></span><p><b>'+num(GS)+'</b> <span class="muted">('+pg+'%)</span> are in the other '+GAP.length+' towns, where 222 has no events. <span class="muted">The colors are the '+CL.length+' clusters below.</span></p></div></div>'
   +'<h2>The story in four steps</h2>'
