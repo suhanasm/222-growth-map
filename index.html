@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where 222 Could Go Next: Greater Boston Co-op Map</title>
+<meta name="description" content="Northeastern co-op students work in Greater Boston towns where 222 has no events. Here is where to host first.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#16221A;--bg2:#1B2A21;--card:#1F3025;--line:#2F4235;--ink:#F4F1DC;--muted:#A2A999;--pop:#F1D98F;--live:#7ED6A4;--onpop:#16221A}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px;background:var(--bg)}
+html,body{margin:0}
+body{background:linear-gradient(180deg,#1B2A21 0,#16221A 560px) var(--bg) no-repeat;color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:"Crimson Pro",Georgia,"Times New Roman",serif;font-weight:600}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav div{max-width:760px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:8px 12px}
+.nav a{white-space:nowrap;font-size:.86rem;color:var(--muted);text-decoration:none;padding:6px 11px;border-radius:999px}
+.nav a:hover{color:var(--ink);background:var(--card)}
+@media (max-width:700px){.nav::after{content:"";position:absolute;top:0;right:0;bottom:0;width:40px;background:linear-gradient(to right,transparent,var(--bg));pointer-events:none}.nav div{padding-right:44px}}
+main{max-width:760px;margin:0 auto;padding:26px 18px 72px}
+.eyebrow{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+h1{text-wrap:balance;font-size:clamp(2.05rem,8.2vw,3.3rem);line-height:1.05;letter-spacing:-.015em;margin:0 0 14px}
+h1 .pop{color:var(--pop)}
+h2{font-size:1.75rem;line-height:1.15;margin:52px 0 8px;letter-spacing:-.005em}
+h3{margin:0 0 2px;font-size:1.3rem;line-height:1.2}
+p{margin:0 0 12px}.lede{font-size:1.12rem;color:var(--muted);max-width:34em}.muted{color:var(--muted)}.small{font-size:.86rem}
+.def{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:18px 0 12px}
+.def b{color:var(--pop)}
+.split{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0 6px}
+.splitt{font-size:1.02rem;margin:0 0 12px}.splitt b{font-family:"Crimson Pro",Georgia,serif;font-size:1.7rem;font-weight:600}
+.splitbar{display:flex;height:14px;border-radius:99px;overflow:hidden;background:var(--bg2);margin-bottom:12px}.splitbar i{display:block;height:100%}
+.splitrow{display:flex;gap:10px;align-items:flex-start;margin:0 0 10px}.splitrow:last-child{margin:0}.splitrow .k{width:12px;height:12px;border-radius:50%;margin-top:7px;flex:none}
+.splitrow p{margin:0}.splitrow b{font-family:"Crimson Pro",Georgia,serif;font-size:1.4rem;font-weight:600}
+.vid{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--pop);border-radius:16px;padding:10px;margin:18px 0 0;text-decoration:none;color:var(--ink)}
+.vid img{width:132px;height:84px;object-fit:cover;border-radius:10px;flex:none;background:var(--bg2)}
+.vid b{display:block;font-size:1.02rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 12px}
+.step{display:flex;gap:14px;margin:16px 0}.step i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--pop);color:var(--onpop);font-style:normal;font-weight:700;font-size:.88rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.step p{margin:0}
+.note{border-left:3px solid var(--pop);padding:4px 0 4px 14px;margin:18px 0}
+.tag{display:inline-block;font-size:.72rem;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted);margin:4px 6px 0 0}
+.tag.g{border-color:var(--pop);color:var(--pop)}.tag.l{border-color:var(--live);color:var(--live)}
+.mapbox{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:6px;margin:12px 0}
+svg{width:100%;height:auto;display:block;touch-action:manipulation}.dot{cursor:pointer}.dot:focus{outline:none}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin:6px 4px 4px}
+.sw{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.sw.cov{background:rgba(126,214,164,.35);border:1px solid var(--live)}.sw.ev{background:var(--live);border-radius:2px;transform:rotate(45deg)}
+.big{font-family:"Crimson Pro",Georgia,serif;font-size:2.4rem;font-weight:600;line-height:1.05}
+.lead{border-top:1px solid var(--line);padding:10px 0 0;margin-top:10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}
+.chip{font:inherit;font-size:.82rem;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.chip.on{background:var(--pop);border-color:var(--pop);color:var(--onpop);font-weight:600}
+input[type=text]{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:0 0 8px}
+.list button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;background:none;border:0;border-bottom:1px solid var(--line);padding:11px 4px;color:var(--ink);cursor:pointer}
+.list button.sel{font-weight:700;background:var(--bg2)}
+.list .nm{flex:1;display:flex;flex-direction:column;gap:1px}.list .sub{font-size:.76rem;font-weight:400}.chev{color:var(--muted);font-size:1.3rem;line-height:1;margin-left:-2px}.lh{padding-right:20px!important;display:flex;justify-content:space-between;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:4px 4px 6px;border-bottom:1px solid var(--line)}.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+.cl .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.cl .top .n{font-family:"Crimson Pro",Georgia,serif;font-size:1.9rem;font-weight:600;line-height:1}
+.track{height:8px;border-radius:99px;background:var(--bg2);margin:8px 0 10px;overflow:hidden}.fill{height:100%;border-radius:99px}
+.tw{display:flex;flex-wrap:wrap;gap:6px}
+.twb{font:inherit;font-size:.82rem;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer}.twb b{color:var(--muted);font-weight:500;margin-left:4px}
+.btn{display:inline-block;font:inherit;font-weight:600;background:var(--pop);color:var(--onpop);border:0;border-radius:12px;padding:12px 18px;text-decoration:none;cursor:pointer}
+.about{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin:14px 0 0}
+.about p{font-size:1.02rem}
+.ask{border-top:1px solid var(--line);margin-top:18px;padding-top:16px}
+.vs{width:100%;border-collapse:collapse;font-size:.86rem;margin-bottom:6px}.vs th,.vs td{padding:7px 4px;border-bottom:1px solid var(--line);text-align:right;font-weight:500}.vs th:first-child,.vs td:first-child{text-align:left;color:var(--muted);width:34%}.vs td:not(:first-child){white-space:nowrap}.vs th{color:var(--muted);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}.vs tr.sub td{text-align:left;color:var(--ink);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;padding-top:12px;border-bottom:0;white-space:normal!important;width:auto}.vs td:nth-child(2){color:var(--pop);font-weight:600}
+.ask h3{font-size:1.5rem;margin-bottom:6px}.about p.em{font-size:1.35rem}.em{font-family:"Crimson Pro",Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--pop);margin:8px 0 0;user-select:all;-webkit-user-select:all;word-break:break-all}.em2{font-size:1.05rem;color:var(--muted);margin:0;user-select:all;-webkit-user-select:all;word-break:break-all}
+.cmp{display:grid;grid-template-columns:96px 1fr;gap:8px;align-items:center;margin:0 0 10px}.cn{font-size:.86rem;display:flex;align-items:center}
+.bar{display:flex;align-items:center;gap:8px;margin:3px 0}.bt{flex:1;height:8px;border-radius:99px;background:var(--bg2);overflow:hidden}.bt i{display:block;height:100%;border-radius:99px}.bar b{font-size:.78rem;font-weight:500;width:32px;text-align:right}
+.lg{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 10px}.lk{display:inline-block;width:18px;height:8px;border-radius:99px;margin-right:6px;vertical-align:1px}.lk.s{background:var(--ink)}.lk.l{background:var(--ink);opacity:.4}
+figure{margin:20px 0 0}figure img{width:100%;border-radius:16px;display:block}figcaption{font-size:.84rem;color:var(--muted);margin-top:8px}
+a{color:var(--pop)}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--pop);outline-offset:2px}
+</style></head><body>
+<div class="nav"><div><a href="#top">Story</a><a href="#map">Map</a><a href="#gap">The gap</a><a href="#start">Where to start</a><a href="#about">About me</a></div></div>
+<main id="app"></main>
+<script>
+var T=[{"n":"Boston","la":42.3601,"lo":-71.0589,"mi":0.0,"t":20342},{"n":"Cambridge","la":42.3736,"lo":-71.1097,"mi":2.8,"t":5002},{"n":"Waltham","la":42.3765,"lo":-71.2356,"mi":9.1,"t":1310},{"n":"Somerville","la":42.3876,"lo":-71.0995,"mi":2.8,"t":864},{"n":"Burlington","la":42.5048,"lo":-71.1956,"mi":12.2,"t":827},{"n":"Framingham","la":42.2793,"lo":-71.4162,"mi":19.1,"t":747},{"n":"Lexington","la":42.4473,"lo":-71.2245,"mi":10.4,"t":660},{"n":"Bedford","la":42.4906,"lo":-71.276,"mi":14.3,"t":546},{"n":"Billerica","la":42.5584,"lo":-71.2689,"mi":17.4,"t":462},{"n":"Andover","la":42.6583,"lo":-71.1368,"mi":21.0,"t":453},{"n":"Watertown","la":42.3709,"lo":-71.1828,"mi":6.4,"t":448},{"n":"Needham","la":42.2809,"lo":-71.2377,"mi":10.6,"t":444},{"n":"Woburn","la":42.4793,"lo":-71.1523,"mi":9.5,"t":419},{"n":"Newton","la":42.337,"lo":-71.2092,"mi":7.8,"t":330},{"n":"Quincy","la":42.2529,"lo":-71.0023,"mi":8.0,"t":320},{"n":"Acton","la":42.4851,"lo":-71.4329,"mi":20.9,"t":309},{"n":"Norwood","la":42.1945,"lo":-71.1995,"mi":13.5,"t":301},{"n":"Marlborough","la":42.3459,"lo":-71.5523,"mi":25.2,"t":297},{"n":"Wilmington","la":42.5465,"lo":-71.1737,"mi":14.1,"t":288},{"n":"Brookline","la":42.3318,"lo":-71.1212,"mi":3.7,"t":265}];
+var ME={name:"Suhana",email:"suhana.sm07@gmail.com",email2:"madia.s@northeastern.edu",video:"",thumb:"",photo:"",photoCaption:"My first sketch of 222, drawn by hand."};
+var O=[
+ {n:"Somerville",town:"Somerville",la:42.3876,lo:-71.0995,d:"American dinner and bowling"},
+ {n:"Seaport, Boston",town:"Boston",la:42.3519,lo:-71.0434,d:"Costumed dinner and private bar"},
+ {n:"Porter Square",town:"Cambridge",la:42.3884,lo:-71.1191,d:"Halloween dinner and party"},
+ {n:"South End, Boston",town:"Boston",la:42.3412,lo:-71.0750,d:"Brunch and bookshop crawl"},
+ {n:"Brookline",town:"Brookline",la:42.3318,lo:-71.1212,d:"Early dinner and pottery painting"}
+];
+var CL=[
+ {n:"North",c:"#E28FB0",hub:"Burlington",towns:["Burlington","Lexington","Bedford","Billerica","Andover","Woburn","Wilmington"]},
+ {n:"Inner West",c:"#F0A66B",hub:"Waltham",towns:["Waltham","Watertown","Needham","Newton"]},
+ {n:"MetroWest",c:"#8EC5E8",hub:"Framingham",towns:["Framingham","Acton","Marlborough"]},
+ {n:"South",c:"#B79CEB",hub:"Quincy",towns:["Quincy","Norwood"]}
+];
+var VEN=[
+ {town:"Waltham",n:"Craft Food Halls CityPoint",a:"200 5th Ave, Waltham, MA 02451",t:"Food hall with games",f:["Private and semi-private areas for events","Self-serve beer wall; games such as foosball and ping pong","Reservations recommended for large groups","Hosts public and private events"],c:"Capacity for a full 222 group, a private or semi-private area held for the evening, and the minimum spend."},
+ {town:"Burlington",n:"Kings Dining & Entertainment",a:"52 Second Ave, Burlington, MA 01803",t:"Bowling, billiards, arcade and dining",f:["Hosts private events, including corporate outings and parties","Trivia, karaoke and DJ nights","Open every day, from 3pm Monday to Thursday and 11:30am Friday to Sunday, until midnight or 1am"],c:"Capacity for a full 222 group, a private area held for the evening, and the minimum spend."},
+ {town:"Framingham",n:"Jack’s Abby Beer Hall",a:"100 Clinton St, Framingham, MA 01702",t:"Beer hall and kitchen",f:["Table reservations for groups of 10 to 20","Semi-private areas for 30 to 40 guests","A private Fest Hall for up to 55 guests, with a room fee and a food and beverage minimum (Winter 2025 brochure)"],c:"Capacity for a full 222 group, whether a semi-private area can be held, and the room fee and minimum spend."},
+ {town:"Quincy",n:"The Common Market Restaurants",a:"97 and 110 Willard St, Quincy, MA 02169",t:"Restaurants with function rooms",f:["Private rooms for groups of 25 to 125","Functions Monday to Saturday, afternoon or evening; closed Sundays for in-house functions"],c:"Which Willard St location, capacity for a full 222 group in one room, and the minimum spend."}
+];
+function tw(n){return T.filter(function(t){return t.n===n;})[0];}
+function sum(a){return a.reduce(function(s,t){return s+t.t;},0);}
+T.forEach(function(t){t.evs=O.filter(function(o){return o.town===t.n;});t.ev=t.evs.length>0;});
+var TOTAL=sum(T);
+var GAP=T.filter(function(t){return !t.ev;}),COV=T.filter(function(t){return t.ev;});
+var GS=sum(GAP),CS=sum(COV);
+CL.forEach(function(c){c.list=c.towns.map(tw).sort(function(a,b){return b.t-a.t;});c.sum=sum(c.list);c.list.forEach(function(t){t.cl=c;});});
+CL.sort(function(a,b){return b.sum-a.sum;});
+function mi(a,b){var R=3958.8,p1=a.la*Math.PI/180,p2=b.la*Math.PI/180,dl=(b.lo-a.lo)*Math.PI/180,dp=p2-p1,h=Math.sin(dp/2)*Math.sin(dp/2)+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)*Math.sin(dl/2);return 2*R*Math.asin(Math.sqrt(h));}
+var S={sel:"Waltham",q:"",f:"all"};
+var app=document.getElementById("app");
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function num(n){return n.toLocaleString("en-US");}
+var K=4.6,LO0=-71.70,LA0=42.72;
+function px(la,lo){return [(lo-LO0)*82.4*K,(LA0-la)*111*K];}
+var BOS=px(42.3601,-71.0589);
+function rad(n){return 3+2.4*Math.log(n/100+1);}
+var LAB=(function(){
+  var placed=[],out=[],ang=[0,180,-40,40,140,-140,90,-90,-20,20,160,-160];
+  T.forEach(function(t){
+    var p=px(t.la,t.lo),r=rad(t.t),w=t.n.length*4.9+2,h=10,best=null;
+    for(var d=0;d<4&&!best;d++){var dist=r+4+d*13;
+      for(var i=0;i<ang.length;i++){var a=ang[i]*Math.PI/180,cx=p[0]+Math.cos(a)*dist,cy=p[1]+Math.sin(a)*dist,right=Math.cos(a)>=0,x0=right?cx:cx-w,y0=cy-h/2;
+        if(x0<2||x0+w>418||y0<2||y0+h>348)continue;
+        var ok=placed.every(function(b){return x0+w<b[0]||x0>b[0]+b[2]||y0+h<b[1]||y0>b[1]+b[3];});
+        if(ok){best={x:cx,y:cy,right:right,d:d,a:a};placed.push([x0,y0,w,h]);break;}}}
+    if(!best){best={x:p[0]+r+4,y:p[1],right:true,d:0,a:0};placed.push([best.x,best.y-5,w,h]);}
+    out.push({t:t,p:p,r:r,b:best});
+  });
+  return out;
+})();
+function dim(t){return (S.f==="gap"&&t.ev)||(S.f==="cov"&&!t.ev);}
+function mapSvg(){
+  var s='<svg viewBox="0 0 420 350" role="img" aria-label="Schematic map of the 20 towns with the most co-op placements, colored by cluster">';
+  [5,10,15,20,25].forEach(function(m){var r=m*1.609*K;s+='<circle cx="'+BOS[0]+'" cy="'+BOS[1]+'" r="'+r+'" fill="none" stroke="var(--line)" stroke-dasharray="3 4"/><text x="'+(BOS[0]+r*0.71+2)+'" y="'+(BOS[1]+r*0.71+10)+'" font-size="8" fill="var(--muted)">'+m+' mi</text>';});
+  LAB.forEach(function(L){var t=L.t,sel=S.sel===t.n,op=dim(t)?.18:1;
+    var col=t.ev?'var(--live)':t.cl.c,fill=t.ev?'rgba(126,214,164,.35)':t.cl.c;
+    s+='<g class="dot" data-a="t" data-v="'+esc(t.n)+'" tabindex="0" role="button" aria-label="'+esc(t.n)+'" opacity="'+op+'"><circle cx="'+L.p[0]+'" cy="'+L.p[1]+'" r="'+L.r+'" fill="'+fill+'" fill-opacity="'+(t.ev?1:.8)+'" stroke="'+(sel?'#F4F1DC':col)+'" stroke-width="'+(sel?3:1.2)+'"/><circle cx="'+L.p[0]+'" cy="'+L.p[1]+'" r="'+Math.max(L.r,12)+'" fill="transparent"/></g>';});
+  O.forEach(function(o,i){var p=px(o.la,o.lo),op=S.f==="gap"?.2:1;s+='<g class="dot" data-a="o" data-v="'+i+'" tabindex="0" role="button" aria-label="'+esc(o.n)+', 222 event" opacity="'+op+'"><rect x="'+(p[0]-5)+'" y="'+(p[1]-5)+'" width="10" height="10" transform="rotate(45 '+p[0]+' '+p[1]+')" fill="var(--live)" stroke="var(--bg2)" stroke-width="1.5"/><circle cx="'+p[0]+'" cy="'+p[1]+'" r="8" fill="transparent"/></g>';});
+  LAB.forEach(function(L){var b=L.b,t=L.t,op=dim(t)?.25:1;
+    if(b.d>0){s+='<line x1="'+(L.p[0]+Math.cos(b.a)*L.r)+'" y1="'+(L.p[1]+Math.sin(b.a)*L.r)+'" x2="'+b.x+'" y2="'+b.y+'" stroke="var(--muted)" stroke-width=".6" opacity="'+op+'"/>';}
+    s+='<text x="'+b.x+'" y="'+(b.y+3)+'" text-anchor="'+(b.right?'start':'end')+'" font-size="8.5" font-weight="'+(S.sel===t.n?700:500)+'" fill="var(--ink)" stroke="var(--bg2)" stroke-width="3" opacity="'+op+'" style="paint-order:stroke;pointer-events:none">'+esc(t.n)+'</text>';});
+  return s+'</svg>';
+}
+function status(t){return t.ev?'<span class="tag l">Has a 222 event</span>':'<span class="tag" style="border-color:'+t.cl.c+';color:'+t.cl.c+'">No 222 event · '+esc(t.cl.n)+' cluster</span>';}
+function panel(){
+  if(S.sel&&S.sel.indexOf("o:")===0){var o=O[+S.sel.slice(2)];return '<div class="card"><span class="tag l">Has a 222 event</span><h3>'+esc(o.n)+'</h3><p class="small muted" style="margin:0">'+esc(o.d)+'</p></div>';}
+  var t=tw(S.sel);if(!t){return '<div class="card muted">Select a town on the map or in the list.</div>';}
+  var rank=T.indexOf(t)+1,h='<div class="card"><h3>'+esc(t.n)+', MA</h3><p class="small muted">'+(t.mi?t.mi+' miles in a straight line from downtown Boston':'Downtown Boston')+'<br>#'+rank+' of the 20 largest towns'+(t.ev?'':' · #'+(GAP.indexOf(t)+1)+' of the '+GAP.length+' with no 222 event')+'</p><div class="big">'+num(t.t)+'</div><p class="small muted">co-op placements · '+(t.t/TOTAL*100).toFixed(1)+'% of the total</p><div>'+status(t)+'</div>';
+  if(t.ev){h+='<div class="lead">'+t.evs.map(function(o){return '<p class="small" style="margin:6px 0 0">'+esc(o.n)+': <span class="muted">'+esc(o.d)+'</span></p>';}).join("")+'</div>';}
+  else{h+='<div class="lead"><p class="small" style="margin:0"><b>'+esc(t.cl.n)+' cluster hub:</b> '+esc(t.cl.hub)+(t.cl.hub===t.n?' (this town)':'')+'</p></div>';}
+  var v=VEN.filter(function(x){return x.town===t.n});
+  if(v.length){h+='<div class="lead"><b>Candidate venue</b>'+v.map(function(x){return '<p class="small" style="margin:6px 0 0">'+esc(x.n)+': <span class="muted">'+esc(x.t)+'. Details under Where to start.</span></p>';}).join("")+'</div>';}
+  return h+'</div>';
+}
+function listHtml(){var q=S.q.trim().toLowerCase();return T.filter(function(t){return (!q||t.n.toLowerCase().indexOf(q)>-1)&&(S.f==="all"||(S.f==="gap"&&!t.ev)||(S.f==="cov"&&t.ev));}).map(function(t){var sub=t.ev?'<span class="sub" style="color:var(--live)">Has a 222 event</span>':'<span class="sub" style="color:'+t.cl.c+'">No 222 event · '+esc(t.cl.n)+' cluster</span>';return '<button data-a="t" data-v="'+esc(t.n)+'" data-from="list" class="'+(S.sel===t.n?'sel':'')+'"><span class="nm"><span>'+(T.indexOf(t)+1)+'. '+esc(t.n)+'</span>'+sub+'</span><span>'+num(t.t)+'</span><span class="chev" aria-hidden="true">›</span></button>';}).join("")||'<p class="small muted">No match.</p>';}
+function chips(){var c=[["all","All "+T.length],["gap","No 222 event ("+GAP.length+")"],["cov","Has a 222 event ("+COV.length+")"]];return '<div class="chips">'+c.map(function(x){return '<button class="chip'+(S.f===x[0]?' on':'')+'" data-a="f" data-v="'+x[0]+'">'+x[1]+'</button>';}).join("")+'</div>';}
+function clusters(){var mx=CL[0].sum;return CL.map(function(c){var v=VEN.filter(function(x){return x.town===c.hub})[0];
+  return '<div class="card cl" style="border-left:4px solid '+c.c+'"><div class="top"><h3>'+esc(c.n)+'</h3><span class="n" style="color:'+c.c+'">'+num(c.sum)+'</span></div><p class="small muted" style="margin:2px 0 0">'+c.list.length+' towns · co-op placements</p><div class="track"><div class="fill" style="width:'+(c.sum/mx*100).toFixed(1)+'%;background:'+c.c+'"></div></div><div class="tw">'+c.list.map(function(t){return '<button class="twb" data-a="t" data-v="'+esc(t.n)+'" data-from="list">'+esc(t.n)+'<b>'+num(t.t)+'</b></button>';}).join("")+'</div><p class="small" style="margin:12px 0 0"><b>Hub:</b> '+esc(c.hub)+(v?' · <span class="muted">'+esc(v.n)+'</span>':'')+'</p></div>';}).join("");}
+function venues(){return VEN.map(function(v){var t=tw(v.town);return '<div class="card"><span class="tag" style="border-color:'+t.cl.c+';color:'+t.cl.c+'">'+esc(t.cl.n)+' hub · '+esc(v.town)+'</span><h3>'+esc(v.n)+'</h3><p class="small muted">'+esc(v.t)+' · '+esc(v.a)+'</p><ul class="small" style="margin:8px 0;padding-left:18px">'+v.f.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul><p class="small" style="margin:0"><b>To confirm:</b> <span class="muted">'+esc(v.c)+'</span></p></div>';}).join("");}
+function video(){return ME.video?'<a class="vid" href="'+esc(ME.video)+'" target="_blank" rel="noopener">'+(ME.thumb?'<img src="'+esc(ME.thumb)+'" alt="">':'')+'<span><b>Watch the 60-second walkthrough</b><span class="small muted">Suhana explains the map in one minute.</span></span></a>':'';}
+function photo(){return ME.photo?'<figure><img src="'+esc(ME.photo)+'" alt="'+esc(ME.photoCaption)+'"><figcaption>'+esc(ME.photoCaption)+'</figcaption></figure>':'';}
+function render(){
+  var w=tw("Waltham"),names=COV.map(function(t){return t.n;});
+  var evList=names.slice(0,-1).join(", ")+" and "+names[names.length-1];
+  var pc=Math.round(CS/TOTAL*100),pg=100-pc,cg='linear-gradient(90deg,'+CL.map(function(c,i){return c.c+' '+(i*25)+'% '+((i+1)*25)+'%';}).join(',')+')';
+  var reach=GAP.filter(function(t){return mi(w,t)<=10;}),rs=sum(reach),bu=tw("Burlington"),rbl=GAP.filter(function(t){return mi(bu,t)<=10;}),rb=sum(rbl);
+  var lg='<span><b>No 222 event:</b></span>'+CL.map(function(c){return '<span><span class="sw" style="background:'+c.c+'"></span>'+esc(c.n)+'</span>';}).join("");
+  app.innerHTML='<div id="top"></div><p class="eyebrow">Northeastern co-op × 222</p>'
+  +'<h1>Where 222 could go next: <span class="pop">'+num(GS)+'</span> co-op placements across <span class="pop">'+GAP.length+' towns</span> with no 222 events.</h1>'
+  +'<p class="lede">Northeastern students on co-op can end up in a town where they know no one. This page shows where they are, where 222 has events, and where to host first.</p>'
+  +'<div class="def"><b>What is a co-op?</b> A six-month, full-time, paid job that Northeastern students do during their degree, typically twice. More than 11,000 Northeastern students do one every year.</div>'
+  +video()
+  +'<div class="split"><p class="splitt"><b>'+num(TOTAL)+'</b> co-op placements in the 20 towns with the most</p><div class="splitbar"><i style="width:'+pc+'%;background:var(--live);opacity:.8"></i>'+CL.map(function(c){return '<i style="width:'+(c.sum/TOTAL*100).toFixed(2)+'%;background:'+c.c+'"></i>';}).join("")+'</div>'
+  +'<div class="splitrow"><span class="k" style="background:var(--live)"></span><p><b>'+num(CS)+'</b> <span class="muted">('+pc+'%)</span> are in '+esc(evList)+', where 222 has events.</p></div>'
+  +'<div class="splitrow"><span class="k" style="background:'+cg+'"></span><p><b>'+num(GS)+'</b> <span class="muted">('+pg+'%)</span> are in the other '+GAP.length+' towns, where 222 has no events. <span class="muted">The colors are the '+CL.length+' clusters below.</span></p></div></div>'
+  +'<h2>The story in four steps</h2>'
+  +'<div class="step"><i>1</i><p><b>The people.</b> Every semester, Northeastern students start a co-op, and some land in a place that is new to them, with their usual friends somewhere else.</p></div>'
+  +'<div class="step"><i>2</i><p><b>The need.</b> 222 gives people the chance to meet through curated, in-person experiences instead of having to arrange it themselves.</p></div>'
+  +'<div class="step"><i>3</i><p><b>The gap.</b> In '+GAP.length+' towns where students work, '+num(GS)+' placements in all, 222 has no events. It shows up in every co-op cycle from Fall 2024 to Spring 2026.</p></div>'
+  +'<div class="step"><i>4</i><p><b>The start.</b> I grouped those '+GAP.length+' towns into '+CL.length+' clusters by location, picked a candidate venue in each, and propose a first event in Waltham.</p></div>'
+  +'<div class="note"><b>This is only Northeastern.</b> Students from other schools work in these towns too, so the real audience in each of these places is larger.</div>'
+  +'<h2 id="map">Where they work, and where 222 has events</h2><p class="muted">Tap a town or an event for details.</p>'
+  +'<div class="mapbox">'+mapSvg()+'<div class="legend">'+lg+'<span><span class="sw cov"></span>Town with a 222 event</span><span><span class="sw ev"></span>222 event location</span></div></div>'
+  +'<p class="small muted">The map is schematic and not to scale. Rings show miles from downtown Boston, dot size shows placements, and counts are where students work, not where they live.</p>'
+  +'<div id="panel">'+panel()+'</div>'
+  +'<p class="small muted" style="margin:16px 0 8px"><b>All 20 towns</b> · tap a town for details</p>'+chips()+'<input type="text" id="q" placeholder="Search towns" value="'+esc(S.q)+'"><div class="lh"><span>Town</span><span>Co-op placements</span></div><div class="list" id="list">'+listHtml()+'</div>'
+  +'<h2 id="gap">The gap, in '+CL.length+' clusters</h2><p class="muted">I sorted the '+GAP.length+' towns into '+CL.length+' clusters, which are groups of nearby towns. In each cluster, I would start in its hub, the town with the most co-op placements. Tap a town for details.</p>'+clusters()
+  +'<h2 id="start">Where to start</h2><p class="muted">One venue in each cluster’s hub town, picked because it takes group bookings.</p>'+venues()
+  +'<div class="card"><h3>Proposed first event: Waltham</h3><p class="small muted">Boston and Cambridge, the two largest towns, already have 222 events. Waltham is the next largest town and has no 222 events.</p><p class="small" style="margin:12px 0 2px"><b>Waltham, the hub of Inner West, vs. Burlington, the hub of North (the largest cluster)</b></p><table class="vs"><thead><tr><th></th><th>Waltham</th><th>Burlington</th></tr></thead><tbody><tr><td>Placements in the town</td><td>'+num(w.t)+'</td><td>'+num(bu.t)+'</td></tr><tr><td>Miles from Boston</td><td>'+w.mi+'</td><td>'+bu.mi+'</td></tr></tbody></table><p style="margin:8px 0"><b>Objective.</b> Bring a 222 experience to where co-op students already work, starting with Waltham.</p><p style="margin:0 0 8px"><b>Design.</b> One event at one Waltham venue, in 222’s usual format, promoted through Northeastern co-op channels.</p><p style="margin:0 0 8px"><b>Timing.</b> Over 90% of co-op placements start in January or June to August, so I would hold it a few weeks into one of those cycles.</p><p style="margin:0 0 8px"><b>Measures.</b> Sign-ups, attendance, distance traveled, and interest in a second event.</p><p style="margin:0"><b>My role.</b> Outreach, venue contact, coordination, and a written summary of results.</p></div>'
+  +'<h2 id="about">About me</h2><div class="about"><p>I am '+esc(ME.name)+', a Northeastern student studying Business Administration and Data Science, graduating in May 2027.</p>'
+  +'<p>I have called 4 countries home: India, Singapore, the UK for a semester, and now the US. Every move meant rebuilding my world from scratch, and the hardest part was never the place. It was not having anyone to explore it with. When I came back to Singapore, the city I grew up in, for my co-op, my friends had scattered to universities across the world. It was still home, yet it felt quiet.</p>'
+  +'<p>222’s co-founder Danial Hashemi says people are not just running into each other anymore, and that the whole idea is engineering chance. I have lived that problem in 4 countries.</p>'
+  +'<p>No student should have to feel that way in a place full of people. This page shows where I could start engineering chance for them in Greater Boston.</p>'
+  +'<div class="ask"><h3>Would you be open to a <span style="white-space:nowrap">15-minute</span> call?</h3><p class="em">'+esc(ME.email)+'</p><p class="em">'+esc(ME.email2)+'</p></div></div>'
+  +photo();
+}
+app.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(!b)return;var a=b.getAttribute("data-a"),v=b.getAttribute("data-v");
+  if(a==="t"){S.sel=v;}else if(a==="o"){S.sel="o:"+v;}else if(a==="f"){S.f=v;}
+  var fromList=b.getAttribute("data-from")==="list",y=window.scrollY;render();
+  if(a==="f"){window.scrollTo(0,y);}else{document.getElementById("panel").scrollIntoView({behavior:"smooth",block:fromList?"center":"nearest"});}});
+app.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){var b=e.target.closest("g[data-a]");if(b){e.preventDefault();b.dispatchEvent(new MouseEvent("click",{bubbles:true}));}}});
+app.addEventListener("input",function(e){if(e.target.id==="q"){S.q=e.target.value;document.getElementById("list").innerHTML=listHtml();}});
+render();
+</script></body></html>
